@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "concurrently -k  -n \"NEXT,JEST\" -c \"bgMagenta.bold,bgGreen.bold\" \"yarn dev:turbo\"  \"yarn test:watch\"",
     "dev:turbo": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
+    "lint:all": "yarn lint && yarn lint:prettier:check",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "dev": "yarn lint:prettier:fix && concurrently -k  -n \"NEXT,JEST\" -c \"bgMagenta.bold,bgGreen.bold\" \"yarn dev:turbo\"  \"yarn test:watch\""
+    "test:watch": "jest --watchAll"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.64.2",
