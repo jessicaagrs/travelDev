@@ -9,8 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        custom100: '#A0C873',
+        custom200: '#212529',
+        custom300: '#B0631D',
+        custom400: '#F8F9FA',
+        custom500: '#9C5312',
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
     },
   },
