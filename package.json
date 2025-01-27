@@ -10,7 +10,7 @@
     "lint": "next lint",
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
-    "lint:all": "yarn lint && yarn lint:prettier:check",
+    "lint:all": "yarn lint && yarn lint:prettier:fix",
     "test": "jest",
     "test:watch": "jest --watchAll"
   },
