@@ -1,12 +1,8 @@
 'use client';
+import { CatalogType } from '@/enums/enums';
 import Image from 'next/image';
 import { useState } from 'react';
-
-enum CatalogType {
-  HOTELS,
-  FLIGHTS,
-  CAR_RENTAL,
-}
+import SelectDestination from '@/components/filters/SelectDestionation';
 
 export default function Catalog() {
   const [selected, setSelected] = useState<CatalogType>(CatalogType.HOTELS);
@@ -16,7 +12,7 @@ export default function Catalog() {
   };
 
   return (
-    <section className="font-roboto flex flex-col items-center bg-custom800 my-10 mx-8 rounded-md">
+    <section className="font-roboto flex flex-col items-center bg-custom800 py-5 my-10 mx-8 rounded-md">
       <div className="flex gap-16 py-8">
         <button
           className={`flex flex-col items-center gap-4 transition duration-500 ${selected === CatalogType.HOTELS ? "after:content-[''] after:w-16 after:h-1 after:bg-custom200 after:rounded-md" : ''}`}
@@ -39,6 +35,9 @@ export default function Catalog() {
           <Image src="/carRental.svg" alt="Catalog" width={100} height={100} />
           <p>Aluguel de Carros</p>
         </button>
+      </div>
+      <div className='flex items-center'>
+        <SelectDestination typeData={selected} />
       </div>
     </section>
   );
