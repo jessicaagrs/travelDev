@@ -9,11 +9,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        custom100: '#A0C873',
+        custom100: '#C3E998',
         custom200: '#212529',
         custom300: '#B0631D',
         custom400: '#F8F9FA',
         custom500: '#9C5312',
+        custom600: '#495057',
+        custom700: '#ADB5BD',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
