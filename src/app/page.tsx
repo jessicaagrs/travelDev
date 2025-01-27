@@ -1,3 +1,4 @@
+import Catalog from '@/components/catalog/Catalog';
 import Header from '@/components/header/Header';
 import Slide from '@/components/slide/Slide';
 
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <Header />
       <Slide />
+      <Catalog />
     </main>
   );
 }

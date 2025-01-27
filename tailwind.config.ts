@@ -16,6 +16,7 @@ export default {
         custom500: '#9C5312',
         custom600: '#495057',
         custom700: '#ADB5BD',
+        custom800: '#E9ECEF',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
