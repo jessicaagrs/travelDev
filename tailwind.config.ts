@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        'auto-fit-minmax': 'repeat(auto-fit, minmax(250px, auto))',
+      },
       colors: {
         custom100: '#159A9C',
         custom200: '#002333',
