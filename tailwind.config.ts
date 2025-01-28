@@ -37,6 +37,7 @@ export default {
         custom1075: '#4caf50',
         custom1080: '#66bb6a',
         custom1085: '#81c784',
+        custom1090: '#edf4f9',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
