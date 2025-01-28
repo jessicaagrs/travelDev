@@ -21,7 +21,7 @@ export const SearchHeader = () => {
   return (
     <div className="relative">
       <input
-        className="placeholder:text-custom200 text-sm w-80 p-2 bg-transparent border-b-2 border-custom200 focus:outline-none selection:bg-transparent"
+        className="placeholder:text-custom400 text-sm w-80 p-2 bg-transparent border-b-2 border-custom400 focus:outline-none selection:bg-transparent"
         placeholder="Pesquisar"
         type="text"
         name="search"

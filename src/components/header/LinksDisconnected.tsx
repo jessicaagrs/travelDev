@@ -9,7 +9,7 @@ export const LinksDisconnected = () => {
       <li>
         <Link href="#">Login</Link>
       </li>
-      <li className="py-2 px-4 rounded-md bg-custom300 text-custom400 hover:bg-custom500 shadow-md transition duration-500">
+      <li className="py-2 px-4 rounded-md bg-custom200 text-custom400 hover:bg-custom1005 shadow-md transition duration-500">
         <Link href="#">Registrar</Link>
       </li>
     </ul>
