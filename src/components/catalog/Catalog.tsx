@@ -4,6 +4,27 @@ import Image from 'next/image';
 import { useState } from 'react';
 import SelectDestination from '@/components/filters/SelectDestionation';
 
+const servicesCatalog = [
+  {
+    id: 1,
+    name: 'Hotéis',
+    image: '/hotel.svg',
+    type: CatalogType.HOTELS,
+  },
+  {
+    id: 2,
+    name: 'Voos',
+    image: '/flight.svg',
+    type: CatalogType.FLIGHTS,
+  },
+  {
+    id: 3,
+    name: 'Aluguel de Carros',
+    image: '/carRental.svg',
+    type: CatalogType.CAR_RENTAL,
+  },
+];
+
 export default function Catalog() {
   const [selected, setSelected] = useState<CatalogType>(CatalogType.HOTELS);
 
@@ -14,29 +35,18 @@ export default function Catalog() {
   return (
     <section className="font-roboto flex flex-col items-center bg-custom800 py-5 my-10 mx-8 rounded-md">
       <div className="flex gap-16 py-8">
-        <button
-          className={`flex flex-col items-center gap-4 transition duration-500 ${selected === CatalogType.HOTELS ? "after:content-[''] after:w-16 after:h-1 after:bg-custom200 after:rounded-md" : ''}`}
-          onClick={() => handleClick(CatalogType.HOTELS)}
-        >
-          <Image src="/hotel.svg" alt="Catalog" width={100} height={100} />
-          <p>Hotéis</p>
-        </button>
-        <button
-          className={`flex flex-col items-center gap-4 transition duration-500 ${selected === CatalogType.FLIGHTS ? "after:content-[''] after:w-16 after:h-1 after:bg-custom200 after:rounded-md" : ''}`}
-          onClick={() => handleClick(CatalogType.FLIGHTS)}
-        >
-          <Image src="/flight.svg" alt="Catalog" width={100} height={100} />
-          <p>Voos</p>
-        </button>
-        <button
-          className={`flex flex-col items-center gap-4 transition duration-500 ${selected === CatalogType.CAR_RENTAL ? "after:content-[''] after:w-16 after:h-1 after:bg-custom200 after:rounded-md" : ''}`}
-          onClick={() => handleClick(CatalogType.CAR_RENTAL)}
-        >
-          <Image src="/carRental.svg" alt="Catalog" width={100} height={100} />
-          <p>Aluguel de Carros</p>
-        </button>
+        {servicesCatalog.map((service) => (
+          <button
+            key={service.id}
+            className={`flex flex-col items-center gap-4 transition duration-500 ${selected === service.type ? "after:content-[''] after:w-16 after:h-1 after:bg-custom200 after:rounded-md" : ''}`}
+            onClick={() => handleClick(service.type)}
+          >
+            <Image src={service.image} alt="Catalog" width={100} height={100} />
+            <p>{service.name}</p>
+          </button>
+        ))}
       </div>
-      <div className='flex items-center'>
+      <div className="flex items-center">
         <SelectDestination typeData={selected} />
       </div>
     </section>

@@ -3,6 +3,25 @@ import { ArrowLeft } from '@/components/global/ArrowLeft';
 import { ArrowRight } from '@/components/global/ArrowRight';
 import { useState } from 'react';
 
+const slideButtons = [
+  {
+    id: 1,
+    code: 1,
+  },
+  {
+    id: 2,
+    code: 2,
+  },
+  {
+    id: 3,
+    code: 3,
+  },
+  {
+    id: 4,
+    code: 4,
+  },
+];
+
 export default function Slide() {
   const [numberImg, setNumberImg] = useState(1);
 
@@ -34,26 +53,14 @@ export default function Slide() {
         </button>
       </div>
       <div className="flex justify-center gap-2 mt-2 absolute bottom-2 left-1/2 transform -translate-x-1/2">
-        <button
-          title="next image button"
-          className={`w-8 h-3 ${numberImg === 1 ? 'bg-custom700' : 'bg-custom400'} rounded-lg hover:bg-custom700 transition duration-500`}
-          onClick={() => setNumberImg(1)}
-        ></button>
-        <button
-          title="next image button"
-          className={`w-8 h-3 ${numberImg === 2 ? 'bg-custom700' : 'bg-custom400'} rounded-lg hover:bg-custom700 transition duration-500`}
-          onClick={() => setNumberImg(2)}
-        ></button>
-        <button
-          title="next image button"
-          className={`w-8 h-3 ${numberImg === 3 ? 'bg-custom700' : 'bg-custom400'} rounded-lg hover:bg-custom700 transition duration-500`}
-          onClick={() => setNumberImg(3)}
-        ></button>
-        <button
-          title="next image button"
-          className={`w-8 h-3 ${numberImg === 4 ? 'bg-custom700' : 'bg-custom400'} rounded-lg hover:bg-custom700 transition duration-500`}
-          onClick={() => setNumberImg(4)}
-        ></button>
+        {slideButtons.map((button) => (
+          <button
+            key={button.id}
+            title={`next image button ${button.code}`}
+            className={`w-8 h-3 ${numberImg === button.code ? 'bg-custom700' : 'bg-custom400'} rounded-lg hover:bg-custom700 transition duration-500`}
+            onClick={() => setNumberImg(button.code)}
+          ></button>
+        ))}
       </div>
     </div>
   );

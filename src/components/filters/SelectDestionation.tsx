@@ -15,7 +15,7 @@ export default function SelectDestination({
       <Combobox data="" label="Destino Final..." />
       <DatePicker label="Data início" />
       <DatePicker label="Data final" />
-      <button className="bg-custom500 text-custom400 w-[120px] h-[36px] transition duration-500 hover:bg-custom300">
+      <button className="bg-custom500 text-custom400 w-[120px] h-[36px] border-none transition duration-500 hover:bg-custom300">
         Buscar
       </button>
     </>

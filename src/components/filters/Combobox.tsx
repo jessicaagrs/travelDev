@@ -1,9 +1,8 @@
 'use client';
 
-import * as React from 'react';
 import { Check, ChevronsUpDown } from 'lucide-react';
+import * as React from 'react';
 
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {
   Command,
@@ -18,7 +17,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
-import { CatalogType } from '@/enums/enums';
+import { cn } from '@/lib/utils';
 
 const frameworks = [
   {
@@ -44,11 +43,11 @@ const frameworks = [
 ];
 
 type ComboboxProps = {
-    readonly data : any;
-    readonly label: string;
+  readonly data: any;
+  readonly label: string;
 };
 
-export function Combobox({data, label}: ComboboxProps) {
+export function Combobox({ data, label }: ComboboxProps) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState('');
 
