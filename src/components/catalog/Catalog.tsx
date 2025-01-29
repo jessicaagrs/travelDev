@@ -33,7 +33,7 @@ export default function Catalog() {
   };
 
   return (
-    <section className="font-roboto flex flex-col items-center bg-custom1090 py-5 my-10 mx-8 rounded-md">
+    <section className="font-roboto flex flex-col items-center bg-custom1090 shadow-md py-5 my-10 mx-8 rounded-md">
       <div className="flex gap-16 py-8">
         {servicesCatalog.map((service) => (
           <button

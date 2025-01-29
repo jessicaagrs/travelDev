@@ -8,12 +8,12 @@ type PostItemProps = {
 
 export const PostItem = ({ source, title, description }: PostItemProps) => {
   return (
-    <div className="flex flex-col gap-4 max-w-[300px] bg-custom1090 rounded-lg">
+    <div className="flex flex-col gap-4 max-w-[400px] bg-custom1090 rounded-lg">
       <div>
         <Image
           src={source}
           alt={title}
-          width={300}
+          width={400}
           height={200}
           className="rounded-t-lg"
         />

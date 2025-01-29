@@ -58,7 +58,7 @@ export function Combobox({ data, label }: ComboboxProps) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between border-custom700 rounded-none"
+          className="w-[200px] justify-between border-custom1045 rounded-none"
         >
           {value
             ? frameworks.find((framework) => framework.value === value)?.label
