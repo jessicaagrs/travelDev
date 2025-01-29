@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Roboto, Poppins } from 'next/font/google';
 import '@/styles/globals.css';
+import ErrorBoundary from '@/error/ErrorBoundary';
+import ErrorPage from './error';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -30,7 +32,11 @@ export default function RootLayout({
         <link rel="icon" href="/logo.svg" sizes="any" />
       </head>
       <body className={`${roboto.variable} ${poppins.variable} antialiased`}>
-        {children}
+        <ErrorBoundary
+          fallback={<ErrorPage error={new Error()} />}
+        >
+          {children}
+        </ErrorBoundary>
       </body>
     </html>
   );
