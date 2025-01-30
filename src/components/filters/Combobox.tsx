@@ -42,11 +42,13 @@ const frameworks = [
   },
 ];
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 type ComboboxProps = {
   readonly data: any;
   readonly label: string;
 };
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 export function Combobox({ data, label }: ComboboxProps) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState('');

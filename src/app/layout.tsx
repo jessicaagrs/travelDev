@@ -32,9 +32,7 @@ export default function RootLayout({
         <link rel="icon" href="/logo.svg" sizes="any" />
       </head>
       <body className={`${roboto.variable} ${poppins.variable} antialiased`}>
-        <ErrorBoundary
-          fallback={<ErrorPage error={new Error()} />}
-        >
+        <ErrorBoundary fallback={<ErrorPage error={new Error()} />}>
           {children}
         </ErrorBoundary>
       </body>

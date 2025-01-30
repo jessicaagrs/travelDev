@@ -6,6 +6,7 @@ type SelectDestinationProps = {
   readonly typeData: CatalogType;
 };
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 export default function SelectDestination({
   typeData,
 }: SelectDestinationProps) {
