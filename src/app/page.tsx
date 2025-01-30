@@ -1,10 +1,17 @@
-import Link from 'next/link';
+import Catalog from '@/components/catalog/Catalog';
+import Header from '@/components/header/Header';
+import Posts from '@/components/posts/Posts';
+import Slide from '@/components/slide/Slide';
+import { Slogan } from '@/components/slogan/Slogan';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-      <Link href="/about">About</Link>
-    </div>
+    <main>
+      <Header />
+      <Slide />
+      <Catalog />
+      <Slogan />
+      <Posts />
+    </main>
   );
 }
